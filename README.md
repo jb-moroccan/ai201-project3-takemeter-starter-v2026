@@ -54,25 +54,53 @@
      The decision rule is worth a point on its own and it's the thing most
      people leave out. Every taxonomy has a hardest boundary. Name yours. -->
 
-### `label_one`
+### `Civic Gripe`
 
-**Definition:**
-
-**Example 1:**
->
-
-**Example 2:**
->
-
-### `label_two`
-
-**Definition:**
+**Definition:** Targets a shared NJ public pain point, like transit, taxes, roads, MVC, etc.
 
 **Example 1:**
->
+>Clearly needs that hat and sunglasses to hide his identity cause he’s doing such honest work that he’s proud of /s…. Also the Jc cop who let him was named eduardo you’d think he’d stand with Spanish people with a very clear Spanish name
 
 **Example 2:**
->
+>That argument about the small number of people abusing it is intentional though. It prevents programs to help people from being enacted so we can give tax breaks to wealthy people
+
+### `State Pride`
+
+**Definition:** Debates or commentary on NJ culture, state reputation, regional splits (North/South/Central)
+
+**Example 1:**
+>There’s a Wendy’s in fort Lee that has a poster with a picture of some black and white movie and it says “the birthplace of cinema” or something.. thought that was weird until I googled it. 
+
+**Example 2:**
+>I never do salt and pepper…the bacon or the TAYLOR HAM is salty enough. Minimal ketchup for me, thanks
+
+### `Local Recommendation`
+
+**Definition:** Asks about or provide specific geographic spots, business, or hidden gems in the state of NJ.
+
+**Example 1:**
+>I am 25f with a medical condition that makes me pass out if I stand too long. Looking for bars in the central Jersey area for younger people with lots of seating. Not just standing room.
+
+Thanks
+
+**Example 2:**
+>Derpycon's a great time! I've gone the past 2 years and am going again this year. As others have said, it's a pretty small convention, but there's a lot to like about the smaller cons.
+
+They've got a few small panel rooms in addition to the main events room. The con runs pretty late with some panels going til a little after midnight if I'm remembering correctly. The arcade is great and has some really fun rhythm and racing games. Dealer's room and artist alley are both pretty small. They've also got stuff like karaoke, AMVs, board games, basically anything you'd find at any nerdy cons.
+
+The location is also great. The setup of the hotel is great for hanging around and the fact that it's right in New Brunswick means you've got plenty of options for bars and food.
+
+Since it's pretty small, if you're not sure about spending the whole weekend down there, you can just get a single day badge for whichever day ends up having the most stuff on the schedule you'd be interested in.
+
+### `Blunt Directive`
+
+**Definition:** A direct, no nonsense factual correction or practical solution.
+
+**Example 1:**
+>I block the texts. When they call I pick up and stay on the line enough to get a real person. Then I play the loudest part of Raining Blood by Slayer into my phone from my computer speakers at max volume.
+
+**Example 2:**
+>The people behind you that are honking will not pay your bills when you rush and cause an accident.
 
 ### The hardest boundary
 
