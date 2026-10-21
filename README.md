@@ -135,11 +135,11 @@ I labeled the first 20 cold without any help. Then, I used AI to help pre-label 
 
 | Label | Count | Share |
 |---|---|---|
-| Civic Gripe |  |  |
-| State Pride |  |  |
-| Local Recommendation |  |  |
-| Blunt Directive |  |  |
-| **Total** |  | 100% |
+| Civic Gripe | 55 | 35.7% |
+| State Pride | 39 | 25.3% |
+| Local Recommendation | 34 | 22.1% |
+| Blunt Directive | 26 | 16.9% |
+| **Total** | 154 | 100% |
 
 **Three hard cases**
 
@@ -147,25 +147,25 @@ I labeled the first 20 cold without any help. Then, I used AI to help pre-label 
      been, and what you chose. These are worth more than the easy 190. -->
 
 **1.**
-> *The post:*
+> *The post:* "Car insurance is dogshit here. Also, maybe the person is disabled and can't drive so they can't buy a car? You make it sound so easy to just go out and get a car 😂"
 >
-> *Could have been:*
+> *Could have been:* Civic Gripe or Blunt Directive
 >
-> *I chose, because:*
+> *I chose, because:* I chose Blunt Directive because although the post mentions insurance, the subject was discussing about the person not having a car and not being able to drive. It's a direct response to the commenter proposing another idea of why the person may not drive or have a car, rather than talking about insurance issues in NJ.
 
 **2.**
-> *The post:*
+> *The post:* There’s a Wendy’s in fort Lee that has a poster with a picture of some black and white movie and it says “the birthplace of cinema” or something.. thought that was weird until I googled it.,State Pride,cold
 >
-> *Could have been:*
+> *Could have been:* State Pride or Local Recommendation
 >
-> *I chose, because:*
+> *I chose, because:* I chose State Pride because if you remove the Fort Lee and Wendy's, the post still talks about NJ claim to film history vs. suggesting to visit either the restaurant or city. This is about the history not recommending a place to visit.
 
 **3.**
-> *The post:*
+> *The post:* Isn’t or wasn’t there also an office or something Nintendo related in Glen Rock as well? Feel like I remember that as a kid. Nothing to actually go in and see but just a random office or something.
 >
-> *Could have been:*
+> *Could have been:* State Pride or Local Recommendation
 >
-> *I chose, because:*
+> *I chose, because:* I chose State Pride because even though both a city (Glen Rock) and office (Nintendo) are places that are mentioned in the post, this is more of a question around NJ history than asking about a place to visit. State Pride captures the commentary of this post on NJ's gaming history and culture.
 
 ---
 
