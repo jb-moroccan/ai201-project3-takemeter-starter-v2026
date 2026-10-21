@@ -22,8 +22,8 @@ examples of it"*. A reason that could be attached to any project does not.
 
 ## Pick numbers you can defend
 
-Not numbers that sound impressive. Three labels means a coin-flip guesser gets
-about 33%, so a target of 0.40 is barely a target. Your number should sit
+Not numbers that sound impressive. Four labels means a random guesser gets
+about 25%, so a target of 0.40 is barely a target. Your number should sit
 somewhere you'd honestly call useful.
 
 **Cover at least three of these five areas.** They're here as prompts, not as a
@@ -55,11 +55,11 @@ whether you hit them:
 
 <!-- Your criterion. It must name a number. -->
 
-
+The classifier must achieve at least 0.60 accuracy on the test split for each of the three seeds.
 
 **Why this target:**
 
-
+There are four labels, so uniform random guessing gives 0.25 accuracy. My 0.60 target is 0.35 higher than that chance baseline. The test split is small, so results may vary across seeds.
 
 ---
 
@@ -67,11 +67,11 @@ whether you hit them:
 
 <!-- Your criterion. -->
 
-
+On each of the three test splits, both `State Pride` and `Local Recommendation` must have an F1 score (a measure combining precision and recall) of at least 0.50.
 
 **Why this target:**
 
-
+These labels can both mention New Jersey places, but `State Pride` is about state identity and `Local Recommendation` points to a specific place or business. If the four labels are balanced, uniform random guessing gives an expected per-label F1 of about 0.25, so 0.50 is twice that rough chance baseline. I chose a lower target here because this label boundary is difficult.
 
 ---
 
@@ -79,11 +79,11 @@ whether you hit them:
 
 <!-- Your criterion. -->
 
-
+In my labelled dataset, the most common label must have no more than twice as many examples as the least common label.
 
 **Why this target:**
 
-
+An imbalanced dataset could lead the classifier to favor the most common label. A 2-to-1 limit helps keep examples available for every label; the project notes that per-label scores can jump around when only about 8 examples land in the test split.
 
 ---
 
@@ -91,11 +91,11 @@ whether you hit them:
 
 <!-- Your criterion. -->
 
-
+When labelling 30 of my posts a second time without looking at my original labels, at least 70% of the labels must match my first pass.
 
 **Why this target:**
 
-
+The `State Pride` and `Local Recommendation` boundary can be tricky when a post mentions a place. Matching at least 21 of 30 labels checks whether I apply my own rules consistently.
 
 ---
 
@@ -103,11 +103,11 @@ whether you hit them:
 
 <!-- Your criterion. -->
 
-
+For each seed, accuracy on the most-confident third of test predictions must be at least 0.15 higher than accuracy on the least-confident third.
 
 **Why this target:**
 
-
+I chose a 0.15 gap as a practical sign that confidence separates more reliable predictions from less reliable ones. With about three predictions in each group, one extra correct prediction creates a 0.33 gap, which meets this target. The threshold is a judgment call.
 
 ---
 
