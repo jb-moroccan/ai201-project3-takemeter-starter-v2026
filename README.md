@@ -42,7 +42,7 @@
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
 
-
+This is a classifier that looks at posts from the New Jersey subreddit and categorizes posts into 4 different labels. These 4 labels are Civic Gripe, State Pride, Blunt Directive, and Local Recommendation. I went through a round of cold and AI pre-labeling that I manually reviewed. The device I used to train on is a CPU. 
 
 ---
 
@@ -173,16 +173,39 @@ I labeled the first 20 cold without any help. Then, I used AI to help pre-label 
 
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
-**Base model:**
+**Base model:** "distilbert-base-uncased"
 
 **Settings:** <!-- epochs, learning rate, batch size, seed -->
+EPOCHS = 3
+LEARNING_RATE = 2e-5
+BATCH_SIZE = 16
+SEED = 42
 
 **Anything I changed from the defaults, and why:**
+Nothing
 
 **Split sizes:** <!-- train / val / test, and per-label counts in the test
 split. If a label had fewer than about 8 in test, say so — it explains a lot
 of next unit's variance. -->
 
+label
+Civic Gripe             55
+State Pride             39
+Blunt Directive         34
+Local Recommendation    26
+
+train 107  ·  val 23  ·  test 24
+
+                      train  val  test
+label                                 
+Civic Gripe              38    8     9
+State Pride              27    6     6
+Local Recommendation     18    4     4
+Blunt Directive          24    5     5
+
+[note] 'State Pride' has only 6 examples in the test split.
+[note] 'Local Recommendation' has only 4 examples in the test split.
+[note] 'Blunt Directive' has only 5 examples in the test split.
 
 
 ---
@@ -198,17 +221,18 @@ of next unit's variance. -->
 
 **Moment 1**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* I asked Claude to help pre-label the remaining rows of reddit posts after the 20 I first labeled cold.
+- *What came back:* A list of rows of reddit posts pre-labeled with one of my 4 labels and a note that it was pre-labeled.
+- *What I changed:* I modified a couple rows, notated with the text modified, for labels that I believe were labeled incorrectly.
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* I asked Claude if any 1 label in my group of reddit posts was above 70% since that was a limit we needed to adhere to.
+- *What came back:* It came back with a breakdown of each label and how many posts had that label along with their percentages. None were over 70%.
+- *What I changed:* Nothing was modified in code as a result since all the labels were under the 70% limit.
 
 **Pre-labelling disclosure:**
+Besides the 20 posts that were labeled cold, the remaining 134 posts in the list were labeled my Claude providing it with my descriptions for what each label meant. Anything that didn't get labeled properly will have 'modified' indicated after the pre label text.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
