@@ -104,13 +104,16 @@ Since it's pretty small, if you're not sure about spending the whole weekend dow
 
 ### The hardest boundary
 
-**Which two labels:**
+**Which two labels:** State Pride and Local Recommendation
 
 **The decision rule I used every time:**
-<!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
-     if the tone is heated." -->
+**Test: is the post pointing the reader at a place or business they could go to?** If yes, it's `Local Recommendation`. If the post is about NJ as a whole (its culture, food, reputation, or regional identity), it's `State Pride`, even when it names a real town or business along the way.
 
+The tie-breaker: delete the named place from the post. If the point survives, it's `State Pride`. If the point disappears with it, it's `Local Recommendation`.
 
+*Example:* "There's a Wendy's in Fort Lee with a poster calling the area the 'birthplace of cinema.'" Remove Fort Lee and the Wendy's, and the post still says NJ has a claim to film history. That's `State Pride`. Compare "Looking for bars in central Jersey with lots of seating." Remove "central Jersey" and the request is meaningless. That's `Local Recommendation`.
+
+A post that names a place *and* asks for or gives a recommendation is always `Local Recommendation`, even if it sounds like culture talk.
 
 ---
 
@@ -121,16 +124,21 @@ Since it's pretty small, if you're not sure about spending the whole weekend dow
 
 **Where the posts came from:**
 
+New Jersey Subreddit: https://www.reddit.com/r/newjersey/
+
 **How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
 Say so plainly — the disclosure is required, not penalised. -->
+
+I labeled the first 20 cold without any help. Then, I used AI to help pre-label the remaining rows. I then went through to double check the labels to see if they were accurate and updated any that didn't make sense.
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| Civic Gripe |  |  |
+| State Pride |  |  |
+| Local Recommendation |  |  |
+| Blunt Directive |  |  |
 | **Total** |  | 100% |
 
 **Three hard cases**
