@@ -5,6 +5,7 @@
 #
 # Delete the examples below and put yours in.
 
-analysis: makes an argument backed by a specific, checkable fact
-hot_take: a confident claim with no support offered
-reaction: an immediate response to something that just happened
+Civic Gripe: Targets a shared NJ public pain point, like transit, taxes, roads, MVC, etc.
+State Pride: Debates or commentary on NJ culture, state reputation, regional splits (North/South/Central)
+Local Recommendation: Asks about or provide specific geographic spots, business, or hidden gems in the state of NJ.
+Blunt Directive: A direct, no nonsense factual correction or practical solution.

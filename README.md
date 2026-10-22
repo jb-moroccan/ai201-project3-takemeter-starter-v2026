@@ -245,6 +245,15 @@ Besides the 20 posts that were labeled cold, the remaining 134 posts in the list
 
 ## Baseline vs. Trained
 
+| Measure | Baseline |
+|---|---|
+| Overall accuracy | 0.417 |
+| Macro F1 | 0.329 |
+| F1 — `Blunt Directive` | 0.000 |
+| F1 — `Civic Gripe` | 0.200 |
+| F1 — `Local Recommendation` | 0.615 |
+| F1 — `State Pride` | 0.500 |
+
 <!-- Both models on the same posts. `python baseline.py --trained results.json`
      prints this table for you. -->
 
@@ -258,6 +267,8 @@ Besides the 20 posts that were labeled cold, the remaining 134 posts in the list
 **What I predicted before I looked:**
 <!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
      prediction made afterwards isn't one. -->
+
+I expect the trained model to beat the baseline most on Civic Gripe's F1, because it has the most labeled posts, so training has the most examples to learn that label from.
 
 **What the gap actually means:**
 <!-- If the baseline matched your trained model, your fine-tuning added

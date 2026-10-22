@@ -1,0 +1,160 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 24,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": true,
+  "scores": {
+    "n": 24,
+    "accuracy": 0.4166666666666667,
+    "f1_macro": 0.32884615384615384,
+    "per_label": {
+      "Blunt Directive": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5
+      },
+      "Civic Gripe": {
+        "precision": 1.0,
+        "recall": 0.1111111111111111,
+        "f1": 0.19999999999999998,
+        "support": 9
+      },
+      "Local Recommendation": {
+        "precision": 0.4444444444444444,
+        "recall": 1.0,
+        "f1": 0.6153846153846153,
+        "support": 4
+      },
+      "State Pride": {
+        "precision": 0.35714285714285715,
+        "recall": 0.8333333333333334,
+        "f1": 0.5,
+        "support": 6
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "lmao they literally cover their license plates and run red lights, they really don't gaf about laws. and of course the cops don't gaf about what ICE does",
+      "gold": "Civic Gripe",
+      "predicted": "State Pride"
+    },
+    {
+      "text": "I'm a Giants fan but would absolutely switch if the Jets took on New Jersey. I support the teams that play here even if they don't take our name but I don't root for either NY baseball team...I don't live there, never have. They remind me I'm not from NY constantly. Pass.",
+      "gold": "State Pride",
+      "predicted": "State Pride"
+    },
+    {
+      "text": "If you're a mountain person, why not skip the shore and go to Sussex or Warren county? Jersey has a little bit of everything. It just depends where you go in the state.",
+      "gold": "Local Recommendation",
+      "predicted": "Local Recommendation"
+    },
+    {
+      "text": "Just want to say this is awesome and the site should 100% be historically recognized in some fashion, even just a plaque. You should encourage people to write city officials, give them a boilerplate letter to submit and contact info for the appropriate council people/departments",
+      "gold": "State Pride",
+      "predicted": "Local Recommendation"
+    },
+    {
+      "text": "he's stupid enough to think he spotted a UFO, you think he can figure that out?!",
+      "gold": "Blunt Directive",
+      "predicted": "State Pride"
+    },
+    {
+      "text": "I laugh every time I think of this. I had an ex coworker who was a strong Trump supporter. She was a naturalized citizen with a spouse on a GC. She was all pro trump blaming everything on Biden and immigrants. Then ICE used the detention center over here in essentially her backyard. All of a sudden ICE was a problem because SHE was impacted.",
+      "gold": "Civic Gripe",
+      "predicted": "State Pride"
+    },
+    {
+      "text": "Oof you have never been to north west NJ. The BEST hike is Mount Tammany on the river border but you need to get there early AM to get parking. PLEASE go there if you like mountains",
+      "gold": "Local Recommendation",
+      "predicted": "Local Recommendation"
+    },
+    {
+      "text": "This pisses me off too. And the Statue of Liberty is in NJ waters, yet NYC gets all the credit for it. GTFOH.",
+      "gold": "State Pride",
+      "predicted": "State Pride"
+    },
+    {
+      "text": "Times are hard, could only afford a hyundai",
+      "gold": "Civic Gripe",
+      "predicted": "State Pride"
+    },
+    {
+      "text": "I don't think her math is mathing.",
+      "gold": "Blunt Directive",
+      "predicted": "State Pride"
+    },
+    {
+      "text": "You should get a mailer once they\u2019re ready to start customer installs. I\u2019m in Hopatcong and they just finished my area. Getting installed next week 1gig for $49.99, cancelling Optimum ASAP afterwards.",
+      "gold": "Civic Gripe",
+      "predicted": "Local Recommendation"
+    },
+    {
+      "text": "Big Brook is a great place to get shark teeth but imo the best place to pick it up is in Colts Neck not Marlboro",
+      "gold": "Local Recommendation",
+      "predicted": "Local Recommendation"
+    },
+    {
+      "text": "100% and rush hour traffic makes it so much worse",
+      "gold": "Civic Gripe",
+      "predicted": "Local Recommendation"
+    },
+    {
+      "text": "Approximately 14% of New Jersey's workforce works out of state... which means that 86% of the workforce works in state. There are plenty of industries with gainful employment opportunities situated right in Jersey.",
+      "gold": "Blunt Directive",
+      "predicted": "Local Recommendation"
+    },
+    {
+      "text": "When your commute is 2 hours+ each way, you\u2019ll say the same thing",
+      "gold": "Civic Gripe",
+      "predicted": "Civic Gripe"
+    },
+    {
+      "text": "My son and his family moved back to New Jersey because he makes twice as much here as RN as he did there. Their costs are not significantly different, except for housing, and the schools and cultural advantages to being here are so much better than what they had in the south.",
+      "gold": "State Pride",
+      "predicted": "State Pride"
+    },
+    {
+      "text": "I live in the southern part of the state and have always hated that we have two 2 NY NFL teams playing in NJ. Why isn't one of those teams ours? On top of that people that aren't from the areas assume that small part of the state is the whole state. Smh",
+      "gold": "State Pride",
+      "predicted": "State Pride"
+    },
+    {
+      "text": "I just saw the same sign in Roxbury. Definitely a lot of MAGAs there.",
+      "gold": "Civic Gripe",
+      "predicted": "Local Recommendation"
+    },
+    {
+      "text": "Inherited wealth big factor",
+      "gold": "Blunt Directive",
+      "predicted": "State Pride"
+    },
+    {
+      "text": "I don't know how it is outside of NYC commuter zone, but even the red towns up here spend quite a bit on public programs; they increase property value.",
+      "gold": "Civic Gripe",
+      "predicted": "State Pride"
+    },
+    {
+      "text": "Sandy Hook Nat\u2019l Historical Beach area into Sea Bright just before Asbury Park each offer swim & Sea. Sea Bright I\u2019d bypass on to Asbury Park.",
+      "gold": "Local Recommendation",
+      "predicted": "Local Recommendation"
+    },
+    {
+      "text": "Think of the poor tolls! They\u2019ve got annual COL increase every year.",
+      "gold": "Civic Gripe",
+      "predicted": "State Pride"
+    },
+    {
+      "text": "It's also confusing (to me, anyway) that there's a North Bergen but no South or East or West or 'plain' Bergen, and that North Bergen is south of Bergen County.",
+      "gold": "State Pride",
+      "predicted": "State Pride"
+    },
+    {
+      "text": "I like \u201cbattle-ready parking\u201d but to each their own. If you do it often it goes pretty quick. The back-up cameras make it easier but I like using my side view mirrors.",
+      "gold": "Blunt Directive",
+      "predicted": "State Pride"
+    }
+  ]
+}
