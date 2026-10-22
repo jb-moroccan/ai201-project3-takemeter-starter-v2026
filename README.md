@@ -245,24 +245,17 @@ Besides the 20 posts that were labeled cold, the remaining 134 posts in the list
 
 ## Baseline vs. Trained
 
-| Measure | Baseline |
-|---|---|
-| Overall accuracy | 0.417 |
-| Macro F1 | 0.329 |
-| F1 — `Blunt Directive` | 0.000 |
-| F1 — `Civic Gripe` | 0.200 |
-| F1 — `Local Recommendation` | 0.615 |
-| F1 — `State Pride` | 0.500 |
-
 <!-- Both models on the same posts. `python baseline.py --trained results.json`
      prints this table for you. -->
 
 | Measure | Baseline | Trained | Difference |
 |---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Overall accuracy | 0.417 | 0.375 | -0.042 |
+| Macro F1 | 0.329 | 0.136 | -0.192 |
+| F1 — `Blunt Directive` | 0.000 | 0.000 | +0.000 |
+| F1 — `Civic Gripe` | 0.200 | 0.545 | +0.345 |
+| F1 — `Local Recommendation` | 0.615 | 0.000 | -0.615 |
+| F1 — `State Pride` | 0.500 | 0.000 | -0.500 |
 
 **What I predicted before I looked:**
 <!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
@@ -274,7 +267,7 @@ I expect the trained model to beat the baseline most on Civic Gripe's F1, becaus
 <!-- If the baseline matched your trained model, your fine-tuning added
      nothing — and that is a real finding, not a failure. Say it plainly. -->
 
-
+Civic Gripe did go up for its F1 from 0.200 to 0.545 so my prediction was accurate even though overall, the model performed worse than the baseline. Accuracy dropped from 0.417 to 0.375 and macro F1 dropped from 0.329 to 0.136. All labels other than Civic Gripe for their F1 were 0.000, so it's likely the model is not predicting any label other than Civic Gripe or is getting them wrong.
 
 ---
 
