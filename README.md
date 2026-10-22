@@ -137,8 +137,8 @@ I labeled the first 20 cold without any help. Then, I used AI to help pre-label 
 |---|---|---|
 | Civic Gripe | 55 | 35.7% |
 | State Pride | 39 | 25.3% |
-| Local Recommendation | 34 | 22.1% |
-| Blunt Directive | 26 | 16.9% |
+| Blunt Directive | 34 | 22.1% |
+| Local Recommendation | 26 | 16.9% |
 | **Total** | 154 | 100% |
 
 I only used 154 posts total because I ran out of time collecting posts on reddit, so I decided to stick with a lower amount.
