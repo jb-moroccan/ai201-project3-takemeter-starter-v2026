@@ -83,7 +83,7 @@ In my labelled dataset, the most common label must have no more than twice as ma
 
 **Why this target:**
 
-An imbalanced dataset could lead the classifier to favor the most common label. A 2-to-1 limit helps keep examples available for every label; the project notes that per-label scores can jump around when only about 8 examples land in the test split.
+An imbalanced dataset could lead the classifier to favor the most common label, Civic Gripe. A 2-to-1 limit helps keep examples available for every label; the project notes that per-label scores can jump around when only about 8 examples land in the test split.
 
 ---
 

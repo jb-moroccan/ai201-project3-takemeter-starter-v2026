@@ -141,6 +141,8 @@ I labeled the first 20 cold without any help. Then, I used AI to help pre-label 
 | Blunt Directive | 26 | 16.9% |
 | **Total** | 154 | 100% |
 
+I only used 154 posts total because I ran out of time collecting posts on reddit, so I decided to stick with a lower amount.
+
 **Three hard cases**
 
 <!-- Any post that made you pause: what it was, which two labels it could have
