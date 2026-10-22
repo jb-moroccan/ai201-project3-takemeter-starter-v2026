@@ -1,0 +1,209 @@
+[
+  {
+    "seed": 42,
+    "n_test": 24,
+    "accuracy": 0.375,
+    "f1_macro": 0.13636363636363635,
+    "per_label": {
+      "Civic Gripe": {
+        "precision": 0.375,
+        "recall": 1.0,
+        "f1": 0.5454545454545454,
+        "support": 9
+      },
+      "State Pride": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      "Local Recommendation": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "Blunt Directive": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5
+      }
+    },
+    "confusion": {
+      "Civic Gripe": {
+        "Civic Gripe": 9,
+        "State Pride": 0,
+        "Local Recommendation": 0,
+        "Blunt Directive": 0
+      },
+      "State Pride": {
+        "Civic Gripe": 6,
+        "State Pride": 0,
+        "Local Recommendation": 0,
+        "Blunt Directive": 0
+      },
+      "Local Recommendation": {
+        "Civic Gripe": 4,
+        "State Pride": 0,
+        "Local Recommendation": 0,
+        "Blunt Directive": 0
+      },
+      "Blunt Directive": {
+        "Civic Gripe": 5,
+        "State Pride": 0,
+        "Local Recommendation": 0,
+        "Blunt Directive": 0
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.3149673342704773,
+      "mean_when_wrong": 0.3164317309856415,
+      "accuracy_most_confident_third": 0.375,
+      "accuracy_least_confident_third": 0.375,
+      "n_per_third": 8
+    },
+    "device": "cpu",
+    "device_name": "CPU",
+    "torch_version": "2.14.1+cpu",
+    "max_length": 128
+  },
+  {
+    "seed": 7,
+    "n_test": 24,
+    "accuracy": 0.375,
+    "f1_macro": 0.13636363636363635,
+    "per_label": {
+      "Civic Gripe": {
+        "precision": 0.375,
+        "recall": 1.0,
+        "f1": 0.5454545454545454,
+        "support": 9
+      },
+      "State Pride": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      "Local Recommendation": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "Blunt Directive": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5
+      }
+    },
+    "confusion": {
+      "Civic Gripe": {
+        "Civic Gripe": 9,
+        "State Pride": 0,
+        "Local Recommendation": 0,
+        "Blunt Directive": 0
+      },
+      "State Pride": {
+        "Civic Gripe": 6,
+        "State Pride": 0,
+        "Local Recommendation": 0,
+        "Blunt Directive": 0
+      },
+      "Local Recommendation": {
+        "Civic Gripe": 4,
+        "State Pride": 0,
+        "Local Recommendation": 0,
+        "Blunt Directive": 0
+      },
+      "Blunt Directive": {
+        "Civic Gripe": 5,
+        "State Pride": 0,
+        "Local Recommendation": 0,
+        "Blunt Directive": 0
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.3116914629936218,
+      "mean_when_wrong": 0.3089999556541443,
+      "accuracy_most_confident_third": 0.375,
+      "accuracy_least_confident_third": 0.25,
+      "n_per_third": 8
+    },
+    "device": "cpu",
+    "device_name": "CPU",
+    "torch_version": "2.14.1+cpu",
+    "max_length": 128
+  },
+  {
+    "seed": 2024,
+    "n_test": 24,
+    "accuracy": 0.375,
+    "f1_macro": 0.13636363636363635,
+    "per_label": {
+      "Civic Gripe": {
+        "precision": 0.375,
+        "recall": 1.0,
+        "f1": 0.5454545454545454,
+        "support": 9
+      },
+      "State Pride": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      "Local Recommendation": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "Blunt Directive": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5
+      }
+    },
+    "confusion": {
+      "Civic Gripe": {
+        "Civic Gripe": 9,
+        "State Pride": 0,
+        "Local Recommendation": 0,
+        "Blunt Directive": 0
+      },
+      "State Pride": {
+        "Civic Gripe": 6,
+        "State Pride": 0,
+        "Local Recommendation": 0,
+        "Blunt Directive": 0
+      },
+      "Local Recommendation": {
+        "Civic Gripe": 4,
+        "State Pride": 0,
+        "Local Recommendation": 0,
+        "Blunt Directive": 0
+      },
+      "Blunt Directive": {
+        "Civic Gripe": 5,
+        "State Pride": 0,
+        "Local Recommendation": 0,
+        "Blunt Directive": 0
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.3031507134437561,
+      "mean_when_wrong": 0.302051842212677,
+      "accuracy_most_confident_third": 0.375,
+      "accuracy_least_confident_third": 0.5,
+      "n_per_third": 8
+    },
+    "device": "cpu",
+    "device_name": "CPU",
+    "torch_version": "2.14.1+cpu",
+    "max_length": 128
+  }
+]

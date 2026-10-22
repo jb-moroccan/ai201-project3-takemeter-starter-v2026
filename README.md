@@ -273,6 +273,17 @@ Civic Gripe did go up for its F1 from 0.200 to 0.545 so my prediction was accura
 
 ## Run Log — Before
 
+| Measure | Seed 42 | Seed 7 | Seed 2024 | Spread |
+|---|---|---|---|---|
+| Overall accuracy | 0.375 | 0.375 | 0.375 | 0.000 |
+| Macro F1 | 0.136 | 0.136 | 0.136 | 0.000 |
+| F1 — `Civic Gripe` | 0.545 | 0.545 | 0.545 | 0.000 |
+| F1 — `State Pride` | 0.000 | 0.000 | 0.000 | 0.000 |
+| F1 — `Local Recommendation` | 0.000 | 0.000 | 0.000 | 0.000 |
+| F1 — `Blunt Directive` | 0.000 | 0.000 | 0.000 | 0.000 |
+
+Accuracy moved 0.000 across seeds. Stable enough to trust.
+
 <!-- Five criteria across three seeds. The notebook's section 6 prints the
      spread table; the Target and Verdict columns are yours. -->
 
@@ -289,18 +300,26 @@ Civic Gripe did go up for its F1 from 0.200 to 0.545 so my prediction was accura
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
      An image of a matrix earns nothing. -->
 
-| true \ predicted |  |  |  |
-|---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+| true \ predicted | Civic Gripe | State Pride | Local Recommendation | Blunt Directive |
+|---|---|---|---|---|
+| **Civic Gripe** | 9 | 0 | 0 | 0 |
+| **State Pride** | 6 | 0 | 0 | 0 |
+| **Local Recommendation** | 4 | 0 | 0 | 0 |
+| **Blunt Directive** | 5 | 0 | 0 | 0 |
+
+Biggest confusion: 6 real `State Pride` posts called `Civic Gripe`.
+The other direction: 0 real `Civic Gripe` posts called `State Pride`.
+
+That's lopsided — the model leans toward `Civic Gripe` on this pair.
+A direction like that usually points at your labelling rather than the
+model. Your agreement report is the thing that can tell you which.
 
 **My biggest off-diagonal number, and what it means:**
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
      direction. "7 real analysis posts were called hot_take and only 3 went the
      other way" is a direction, not just an error rate. -->
 
-
+My biggest off-diagonal number is 6 real State Pride posts were labeled as Civic Gripe, so the model hasn't learned the boundary between these two labels."
 
 ---
 
