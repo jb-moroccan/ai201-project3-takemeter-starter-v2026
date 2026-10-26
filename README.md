@@ -424,20 +424,35 @@ Criteria 1, 3 and 5 each point at too few examples for the labels the model neve
 
 ### Run Log — After
 
+| Measure | Seed 42 | Seed 7 | Seed 2024 | Spread |
+|---|---|---|---|---|
+| Overall accuracy | 0.485 | 0.576 | 0.455 | 0.121 |
+| Macro F1 | 0.431 | 0.554 | 0.450 | 0.124 |
+| F1 — `Civic Gripe` | 0.364 | 0.400 | 0.308 | 0.092 |
+| F1 — `State Pride` | 0.500 | 0.667 | 0.444 | 0.222 |
+| F1 — `Local Recommendation` | 0.636 | 0.706 | 0.421 | 0.285 |
+| F1 — `Blunt Directive` | 0.222 | 0.444 | 0.625 | 0.403 |
+
+Accuracy moved 0.121 across seeds — more than 10 points. Your dataset is too small or too lopsided for a stable measure. That IS a diagnosis. Write it down.
+
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. 0.60 accuracy for each seed | ≥ 0.60 | 0.485 | 0.576 | 0.455 | MISSED |
+| 2. 0.50 F1 score for each seed | ≥ 0.50 | 0.431 | 0.554 | 0.450 | MISSED |
+| 3. Most common label has no more than twice least common | yes | yes | yes | yes | MET |
+| 4. Labeling 30 posts a second time, 70% match first pass | ≥ 70% | yes | yes | yes | MET |
+| 5. Accuracy on most confident third must be 0.15 higher than least confident | yes | yes | yes | yes | MET |
 
 **Did it help, and how do I know:**
 
 <!-- If it didn't, say so. Relabelling that didn't help is a genuinely
      interesting result and earns full credit. -->
 
+Yes, on the measures I set, though not enough to meet the brief. Mean accuracy across the three seeds went from 0.375 to 0.505 (0.485, 0.576, 0.455), and mean macro F1 went from 0.136 to 0.478 (0.431, 0.554, 0.450). Criteria 3 (label balance) and 5 (confidence gap) went from MISSED to MET. Criteria 1 and 2 (the 0.60 accuracy and 0.50 F1 floors) are still MISSED, since seed 42 and seed 2024 fall short on both, and seed 7 misses 0.60 accuracy.
 
+I know this from the saved results: results_three_seeds_before.json and results_three_seeds_after.json, both from the same three-seed run. In the before run every seed scored exactly 0.375 accuracy, and the confidence gap was 0.000, +0.125 and −0.125. In the after run the gap was +0.273, +0.182 and +0.636.
+
+The comparison has a caveat. The relabelling changed the dataset, so the test splits are different: before, the test supports were 9/6/4/5, and after they were 8/8/9/8. The same seeds produced different test sets, so part of the gain may come from the data rather than the labels. I'd call this a real improvement on the measures I can check, but I can't separate the effect of the relabelling from the change in the test set without a fixed test set. Seed spread is still 0.121 accuracy, so the result is not yet stable enough to trust.
 
 ---
 
@@ -445,13 +460,27 @@ Criteria 1, 3 and 5 each point at too few examples for the labels the model neve
 
 <!-- For each criterion still missed: what you'd do, and why you stopped. -->
 
-
+Criteria 1 and 2 (0.60 accuracy, 0.50 macro F1): Accuracy is below 0.60 on all three seeds (0.485, 0.576, 0.455), and macro F1 is below 0.50 on seeds 42 and 2024 (0.431 and 0.450). What I'd do next is add more labeled posts, especially for Blunt Directive, which had only 1 of 8 test posts correct. I'd also re-check that label's definition against the staff labels, since most of its errors are going to State Pride. I stopped because I ran out of time.
 
 **The gap between what I meant my labels to capture and what the model
 learned:**
 <!-- Two sentences. Your confusion matrix is the evidence. -->
 
+I meant Blunt Directive to mean a direct factual correction or a practical fix, but in the seed 42 test set 6 of the 8 real Blunt Directive posts were predicted as State Pride, so the model seems to key on surface features like politics and tone rather than the correction-or-solution rule. The matrix below is from seed 42 only, and the reason it leans toward State Pride is my inference, not something the model reported.
 
+| true \ predicted | Civic Gripe | State Pride | Local Recommendation | Blunt Directive |
+|---|---|---|---|---|
+| **Civic Gripe** | 2 | 3 | 3 | 0 |
+| **State Pride** | 0 | 6 | 2 | 0 |
+| **Local Recommendation** | 1 | 1 | 7 | 0 |
+| **Blunt Directive** | 0 | 6 | 1 | 1 |
+
+Biggest confusion: 6 real `Blunt Directive` posts called `State Pride`.
+The other direction: 0 real `State Pride` posts called `Blunt Directive`.
+
+That's lopsided — the model leans toward `State Pride` on this pair.
+A direction like that usually points at your labelling rather than the
+model. Your agreement report is the thing that can tell you which.
 
 <!-- ═════════════════════════════════════════════════════════════════════
 
@@ -473,12 +502,12 @@ learned:**
        [X] Baseline vs. Trained table, with your prediction written beforehand
        [X] Run Log — Before, five criteria across three seeds
        [X] Confusion matrix TYPED AS A MARKDOWN TABLE
-       [ ] A verdict on every criterion
-       [ ] A diagnosis for every miss, using the agreement report as evidence
+       [X] A verdict on every criterion
+       [X] A diagnosis for every miss, using the agreement report as evidence
        [X] Agreement Report with every disagreement adjudicated
-       [ ] One improvement, with Run Log — After
-       [ ] What's Still Broken
-       [ ] results_three_seeds_before.json, results_three_seeds_after.json,
+       [X] One improvement, with Run Log — After
+       [X] What's Still Broken
+       [X] results_three_seeds_before.json, results_three_seeds_after.json,
            baseline_results.json and
            agreement_results.json committed
        [X] At least four new commits

@@ -1,0 +1,209 @@
+[
+  {
+    "seed": 42,
+    "n_test": 33,
+    "accuracy": 0.48484848484848486,
+    "f1_macro": 0.4305555555555556,
+    "per_label": {
+      "Civic Gripe": {
+        "precision": 0.6666666666666666,
+        "recall": 0.25,
+        "f1": 0.36363636363636365,
+        "support": 8
+      },
+      "State Pride": {
+        "precision": 0.375,
+        "recall": 0.75,
+        "f1": 0.5,
+        "support": 8
+      },
+      "Local Recommendation": {
+        "precision": 0.5384615384615384,
+        "recall": 0.7777777777777778,
+        "f1": 0.6363636363636364,
+        "support": 9
+      },
+      "Blunt Directive": {
+        "precision": 1.0,
+        "recall": 0.125,
+        "f1": 0.2222222222222222,
+        "support": 8
+      }
+    },
+    "confusion": {
+      "Civic Gripe": {
+        "Civic Gripe": 2,
+        "State Pride": 3,
+        "Local Recommendation": 3,
+        "Blunt Directive": 0
+      },
+      "State Pride": {
+        "Civic Gripe": 0,
+        "State Pride": 6,
+        "Local Recommendation": 2,
+        "Blunt Directive": 0
+      },
+      "Local Recommendation": {
+        "Civic Gripe": 1,
+        "State Pride": 1,
+        "Local Recommendation": 7,
+        "Blunt Directive": 0
+      },
+      "Blunt Directive": {
+        "Civic Gripe": 0,
+        "State Pride": 6,
+        "Local Recommendation": 1,
+        "Blunt Directive": 1
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.27617138624191284,
+      "mean_when_wrong": 0.2649843096733093,
+      "accuracy_most_confident_third": 0.7272727272727273,
+      "accuracy_least_confident_third": 0.45454545454545453,
+      "n_per_third": 11
+    },
+    "device": "cpu",
+    "device_name": "CPU",
+    "torch_version": "2.14.1+cpu",
+    "max_length": 128
+  },
+  {
+    "seed": 7,
+    "n_test": 33,
+    "accuracy": 0.5757575757575758,
+    "f1_macro": 0.5542483660130719,
+    "per_label": {
+      "Civic Gripe": {
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4,
+        "support": 8
+      },
+      "State Pride": {
+        "precision": 0.5833333333333334,
+        "recall": 0.7777777777777778,
+        "f1": 0.6666666666666666,
+        "support": 9
+      },
+      "Local Recommendation": {
+        "precision": 0.6666666666666666,
+        "recall": 0.75,
+        "f1": 0.7058823529411765,
+        "support": 8
+      },
+      "Blunt Directive": {
+        "precision": 0.4,
+        "recall": 0.5,
+        "f1": 0.4444444444444444,
+        "support": 8
+      }
+    },
+    "confusion": {
+      "Civic Gripe": {
+        "Civic Gripe": 2,
+        "State Pride": 1,
+        "Local Recommendation": 0,
+        "Blunt Directive": 5
+      },
+      "State Pride": {
+        "Civic Gripe": 0,
+        "State Pride": 7,
+        "Local Recommendation": 2,
+        "Blunt Directive": 0
+      },
+      "Local Recommendation": {
+        "Civic Gripe": 0,
+        "State Pride": 1,
+        "Local Recommendation": 6,
+        "Blunt Directive": 1
+      },
+      "Blunt Directive": {
+        "Civic Gripe": 0,
+        "State Pride": 3,
+        "Local Recommendation": 1,
+        "Blunt Directive": 4
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.27598336338996887,
+      "mean_when_wrong": 0.275688499212265,
+      "accuracy_most_confident_third": 0.6363636363636364,
+      "accuracy_least_confident_third": 0.45454545454545453,
+      "n_per_third": 11
+    },
+    "device": "cpu",
+    "device_name": "CPU",
+    "torch_version": "2.14.1+cpu",
+    "max_length": 128
+  },
+  {
+    "seed": 2024,
+    "n_test": 33,
+    "accuracy": 0.45454545454545453,
+    "f1_macro": 0.44954734592892487,
+    "per_label": {
+      "Civic Gripe": {
+        "precision": 0.4,
+        "recall": 0.25,
+        "f1": 0.3076923076923077,
+        "support": 8
+      },
+      "State Pride": {
+        "precision": 0.4,
+        "recall": 0.5,
+        "f1": 0.4444444444444444,
+        "support": 8
+      },
+      "Local Recommendation": {
+        "precision": 0.36363636363636365,
+        "recall": 0.5,
+        "f1": 0.42105263157894735,
+        "support": 8
+      },
+      "Blunt Directive": {
+        "precision": 0.7142857142857143,
+        "recall": 0.5555555555555556,
+        "f1": 0.625,
+        "support": 9
+      }
+    },
+    "confusion": {
+      "Civic Gripe": {
+        "Civic Gripe": 2,
+        "State Pride": 2,
+        "Local Recommendation": 2,
+        "Blunt Directive": 2
+      },
+      "State Pride": {
+        "Civic Gripe": 0,
+        "State Pride": 4,
+        "Local Recommendation": 4,
+        "Blunt Directive": 0
+      },
+      "Local Recommendation": {
+        "Civic Gripe": 3,
+        "State Pride": 1,
+        "Local Recommendation": 4,
+        "Blunt Directive": 0
+      },
+      "Blunt Directive": {
+        "Civic Gripe": 0,
+        "State Pride": 3,
+        "Local Recommendation": 1,
+        "Blunt Directive": 5
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.2799452245235443,
+      "mean_when_wrong": 0.2638195753097534,
+      "accuracy_most_confident_third": 0.8181818181818182,
+      "accuracy_least_confident_third": 0.18181818181818182,
+      "n_per_third": 11
+    },
+    "device": "cpu",
+    "device_name": "CPU",
+    "torch_version": "2.14.1+cpu",
+    "max_length": 128
+  }
+]
