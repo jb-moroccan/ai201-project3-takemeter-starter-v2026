@@ -416,7 +416,11 @@ The pattern shows that I either apply rules loosely or believe that sometimes po
 
 **What I changed:**
 
+I added 66 new posts to labels.csv and changed no existing rows, so the only change is more data. The new posts bring the counts to 55 per label: 29 Local Recommendation, 21 Blunt Directive and 16 State Pride, with Civic Gripe unchanged at 55. The assignment recommended a minimum of 200 posts, so I added 66 more after the first pass, bringing the dataset to 220 and meeting that requirement. I labeled each new post against the definitions in label_definitions.txt, and Blunt Directive posts are factual corrections or practical solutions rather than posts with a blunt tone. 
+
 **Which diagnosis pointed at it:**
+
+Criteria 1, 3 and 5 each point at too few examples for the labels the model never predicts. Criterion 1 and Criterion 5 both show the model collapsing to Civic Gripe, and Criterion 3 is the count gap itself (9 Civic Gripe to 4 Local Recommendation in the test split). Criterion 2 also points here, because State Pride, Blunt Directive and Local Recommendation all have F1 of 0.000. Adding posts to those three labels is the change the diagnoses support. The agreement report also shows I applied rules loosely on 4 of 6 disagreements, so the new posts are only useful if I label them consistently. 
 
 ### Run Log — After
 
