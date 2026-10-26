@@ -1,66 +1,66 @@
 {
   "seed": 42,
-  "n_test": 24,
-  "accuracy": 0.375,
-  "f1_macro": 0.13636363636363635,
+  "n_test": 33,
+  "accuracy": 0.48484848484848486,
+  "f1_macro": 0.4305555555555556,
   "per_label": {
     "Civic Gripe": {
-      "precision": 0.375,
-      "recall": 1.0,
-      "f1": 0.5454545454545454,
-      "support": 9
+      "precision": 0.6666666666666666,
+      "recall": 0.25,
+      "f1": 0.36363636363636365,
+      "support": 8
     },
     "State Pride": {
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
-      "support": 6
+      "precision": 0.375,
+      "recall": 0.75,
+      "f1": 0.5,
+      "support": 8
     },
     "Local Recommendation": {
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
-      "support": 4
+      "precision": 0.5384615384615384,
+      "recall": 0.7777777777777778,
+      "f1": 0.6363636363636364,
+      "support": 9
     },
     "Blunt Directive": {
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
-      "support": 5
+      "precision": 1.0,
+      "recall": 0.125,
+      "f1": 0.2222222222222222,
+      "support": 8
     }
   },
   "confusion": {
     "Civic Gripe": {
-      "Civic Gripe": 9,
-      "State Pride": 0,
-      "Local Recommendation": 0,
+      "Civic Gripe": 2,
+      "State Pride": 3,
+      "Local Recommendation": 3,
       "Blunt Directive": 0
     },
     "State Pride": {
-      "Civic Gripe": 6,
-      "State Pride": 0,
-      "Local Recommendation": 0,
+      "Civic Gripe": 0,
+      "State Pride": 6,
+      "Local Recommendation": 2,
       "Blunt Directive": 0
     },
     "Local Recommendation": {
-      "Civic Gripe": 4,
-      "State Pride": 0,
-      "Local Recommendation": 0,
+      "Civic Gripe": 1,
+      "State Pride": 1,
+      "Local Recommendation": 7,
       "Blunt Directive": 0
     },
     "Blunt Directive": {
-      "Civic Gripe": 5,
-      "State Pride": 0,
-      "Local Recommendation": 0,
-      "Blunt Directive": 0
+      "Civic Gripe": 0,
+      "State Pride": 6,
+      "Local Recommendation": 1,
+      "Blunt Directive": 1
     }
   },
   "confidence": {
-    "mean_when_right": 0.3149673342704773,
-    "mean_when_wrong": 0.3164317309856415,
-    "accuracy_most_confident_third": 0.375,
-    "accuracy_least_confident_third": 0.375,
-    "n_per_third": 8
+    "mean_when_right": 0.27617138624191284,
+    "mean_when_wrong": 0.2649843096733093,
+    "accuracy_most_confident_third": 0.7272727272727273,
+    "accuracy_least_confident_third": 0.45454545454545453,
+    "n_per_third": 11
   },
   "device": "cpu",
   "device_name": "CPU",
