@@ -289,11 +289,11 @@ Accuracy moved 0.000 across seeds. Stable enough to trust.
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. 0.60 accuracy for each seed | ≥ 0.60 | 0.375 | 0.375 | 0.375 | MISSED |
+| 2. 0.50 F1 score for each seed | ≥ 0.50 | 0.136 | 0.136 | 0.136 | MISSED |
+| 3. Most common label has no more than twice least common | yes | no | no | no | MISSED |
+| 4. Labeling 30 posts a second time, 70% match first pass | ≥ 70% | yes | yes | yes | MET |
+| 5. Accuracy on most confident third must be 0.15 higher than least confident | yes | no | no | no | MISSED |
 
 ### Confusion matrix
 
@@ -332,11 +332,11 @@ My biggest off-diagonal number is 6 real State Pride posts were labeled as Civic
 
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
+| 1 | 0.60 accuracy for each seed | ≥ 0.60 | MISSED | The Run Log — Before shows 0.375 on seeds 42, 7 and 2024, a spread of 0.000. The confusion matrix explains it: all 24 test posts were predicted Civic Gripe, so 0.375 is just Civic Gripe's share of the test split (9 of 24). That is 0.225 short on every seed. |
+| 2 | 0.50 F1 score for each seed | ≥ 0.50 | MISSED | Macro F1 is 0.136 on every seed. Only Civic Gripe has a non-zero F1 (0.545). The other three labels are 0.000, so the macro average is 0.545 divided by 4. That is 0.364 short on every seed. |
+| 3 | Most common label has no more than twice least common | yes | MISSED | Test split support is Civic Gripe 9 and Local Recommendation 4, a ratio of 2.25, which is over the limit of 2. The split is the same for every seed, so the result is "no" on all three. |
+| 4 | Labeling 30 posts a second time, 70% match first pass | ≥ 70% | MET | The agreement report has 24 of 30 posts matching the staff labels, which is 80% and above the 70% line. Four of the six disagreements were rules I applied loosely (pile a), so they are consistency problems in my labelling, not a reason to lower the rate. |
+| 5 | Accuracy on most confident third must be 0.15 higher than least confident | yes | MISSED | Most-confident third minus least-confident third, from the confidence results: seed 42 is 0.375 − 0.375 = 0.000, seed 7 is 0.375 − 0.250 = +0.125, and seed 2024 is 0.375 − 0.500 = −0.125. The target needs at least +0.15 on every seed, so on these numbers this is MISSED. |
 
 **Diagnoses**
 
@@ -349,7 +349,21 @@ My biggest off-diagonal number is 6 real State Pride posts were labeled as Civic
      have that can tell a LABELLING problem from a MODEL problem, and this
      section is graded on whether you used it that way. -->
 
+Criteria 1:
 
+Cause: too few examples for a label, which is why the model collapses to one label. Every one of the 24 test posts was predicted Civic Gripe, so the 0.375 accuracy is only the share of Civic Gripe in the test split (9 of 24). Civic Gripe is also the label with the most labeled posts, so the model has learned the majority label and nothing else. The agreement report can't test this: it compares my analysis, hot_take and reaction calls to the staff set on 30 posts, not the four labels in labels.csv, so it can't rule a labelling cause in or out.
+
+Criteria 2:
+
+Cause: too few examples for a label, plus a genuinely hard label pair. Macro F1 is 0.136 because only Civic Gripe has a non-zero F1; the other three labels are 0.000 on every seed. The one pair the model did see is State Pride and Civic Gripe, where 6 real State Pride posts were called Civic Gripe and none went the other way. The agreement report can't check this pair, since it uses the staff taxonomy. It does show that I applied written rules loosely on 4 of its 6 disagreements (pile a). That means the 6-to-0 split could be partly my own inconsistent State Pride and Civic Gripe calls, and I haven't checked that yet. The pair may also just be hard to separate from this data, and the other labels never get predicted at all.
+
+Criteria 3:
+
+Cause: too few examples for a label. The test split has 9 Civic Gripe posts and 4 Local Recommendation posts, a ratio of 2.25 against a limit of 2. This is a property of how many posts I labelled per label, so the fix is more Local Recommendation posts rather than changing the model. This count is also partly a labelling result. The agreement report shows I applied written rules loosely on 4 of its 6 disagreements, and drift like that moves posts between labels, which changes how many land in each one. It only covers 30 posts, though, so it can't tell me how far that drift goes across all 154.
+
+Criteria 5:
+
+The model's confidence tells me nothing about whether it is right. On seed 42 the mean confidence is 0.315 when right and 0.316 when wrong, and the most-confident and least-confident thirds both score 0.375. Seed 7 and seed 2024 show a gap of +0.125 and −0.125, so the sign flips with the seed and the target is never reached. The cause is a task the model can't reach from this much data: the predictions collapse to Civic Gripe for all 24 test posts, so every third has the same accuracy as the majority class. The too-few-examples cause for the three labels the model never predicts is the reason it can't reach the task. The agreement report can't rule label noise in or out for these four labels, since it covers only 30 posts under the staff taxonomy. Its 80% match with staff does not show that my labels are clean. I also applied written rules loosely on 4 of its 6 disagreements (pile a), which is the kind of inconsistency that would add noise. The likely fix is still more examples for the three labels the model never predicts, but I should check label consistency before I rely on that.
 
 ---
 
