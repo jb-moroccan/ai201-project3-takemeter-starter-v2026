@@ -307,6 +307,8 @@ Accuracy moved 0.000 across seeds. Stable enough to trust.
 | **Local Recommendation** | 4 | 0 | 0 | 0 |
 | **Blunt Directive** | 5 | 0 | 0 | 0 |
 
+The device I used to train on is a CPU. 
+
 Biggest confusion: 6 real `State Pride` posts called `Civic Gripe`.
 The other direction: 0 real `Civic Gripe` posts called `State Pride`.
 
@@ -359,7 +361,7 @@ My biggest off-diagonal number is 6 real State Pride posts were labeled as Civic
      data/staff_taxonomy.md, not your own — so every argument below is made
      from those definitions and those decision rules. -->
 
-**Agreement rate:** ___ / 30 = ___%
+**Agreement rate:** 24 / 30 = 80%
 
 <!-- Nobody grades this number. A 60% who argues every disagreement from the
      stated rules beats a 95% who wrote "staff was right" nine times. Several
@@ -381,27 +383,18 @@ My biggest off-diagonal number is 6 real State Pride posts were labeled as Civic
      written rule two different ways on 30 posts, that is direct evidence about
      what you did across your own 200. -->
 
-**1.**
-> *The post:*
->
-> *Staff said / I said:*
->
-> *My call, and why:*
->
-> *Which pile:*
-
-**2.**
-> *The post:*
->
-> *Staff said / I said:*
->
-> *My call, and why:*
->
-> *Which pile:*
+| Post | Staff said | I said | My call, and why | Which pile |
+|---|---|---|---|
+| Checked the entry lists. 41% of this year's field have never run the … | `analysis` | `hot_take` | I said hot take because although a fact wast listed, the conclusion reached about finish line photos and standards dropping didn't appear to be related. Since analysis requires a checkable fact to be load bearing and not a decoration, and one can argue here that the fact could be impacting photos, I was right and the rule was ambigious. | c |
+| Went back through the club results going back to 2012. Every single y… | `analysis` | `reaction` | I said reaction because the end sentence appeared to be an immediate response to being a bad luck year. However, the stat about how many people enter the marathon is specific, checkable and carries the argument. Staff is right, rule covered this, and I applied it loosely. | a |
+| Three of us ran the same session on the same day, different shoes, wi… | `analysis` | `reaction` | I said reaction because there were stats initially stated, but the response to those stats started off by saying I'm not saying shoes do nothing which was reactionary after the race results. Rule 3 states recency doesn't outrank evidence, and the fact of them being 10 seconds apart is checkable. Staff is right and the rule covered this. I applied it loosely | a |
+| The club needs to stop pretending the Tuesday session is for everyone… | `hot_take` | `reaction` | I said reaction because the post felt like a response to how the club handles Tuesday sessions at a Tuesday session. Rule 2 states hot take is something general about the world, while reaction is what just happened. Staff is right since this is general, and I applied the rule loosely. | a |
+| Road racing peaked in about 2015 and everything since has been market… | `hot_take` | `analysis` | I said analysis because the stat about road racing peaking is something that is checkable and is the argument for the change after. The fact isn't necessarily load bearing, so for Rule 1, it fails and should be a hot take. I applied it loosely and staff is right. | a |
+| Every injury thread on this forum is the same injury and the same thr… | `hot_take` | `reaction` | I said reaction because the writer is responding immediately to their experience reading posts in the forum and how it feels for them. This isn't general about the world which rule 2 states is what makes something a hot take. I believe it's ambiguous whether this one unique forum is considered the world or not, so I am sticking with my answer. | c |
 
 **What the pattern in my disagreements tells me:**
 
-
+The pattern shows that I either apply rules loosely or believe that sometimes posts are ambiguous enough that can go either way depending on a rule. This tells me that I need to pay attention more to sticking close to the rules and being specific, along with working out the best choice in ambiguous instances.
 
 ---
 
@@ -446,32 +439,32 @@ learned:**
 
      SUBMISSION CHECKLIST — unit 5
 
-       [ ] criteria.md has five numbered criteria, each naming a NUMBER
-       [ ] Each has a reason underneath tied to your data or taxonomy
-       [ ] labels.csv: at least 150 rows, text/label/note, ONE file not split
-       [ ] No label above 70%
-       [ ] All five unit 5 sections have real content
-       [ ] Label Taxonomy includes the decision rule for your hardest boundary
-       [ ] The Dataset includes three hard cases
-       [ ] results.json and test_split.csv committed (the notebook does this)
-       [ ] At least four new commits
-       [ ] Repository URL submitted — WRITE IT DOWN
+       [X] criteria.md has five numbered criteria, each naming a NUMBER
+       [X] Each has a reason underneath tied to your data or taxonomy
+       [X] labels.csv: at least 150 rows, text/label/note, ONE file not split
+       [X] No label above 70%
+       [X] All five unit 5 sections have real content
+       [X] Label Taxonomy includes the decision rule for your hardest boundary
+       [X] The Dataset includes three hard cases
+       [X] results.json and test_split.csv committed (the notebook does this)
+       [X] At least four new commits
+       [X] Repository URL submitted — WRITE IT DOWN
 
      SUBMISSION CHECKLIST — unit 6
 
-       [ ] Baseline vs. Trained table, with your prediction written beforehand
-       [ ] Run Log — Before, five criteria across three seeds
-       [ ] Confusion matrix TYPED AS A MARKDOWN TABLE
+       [X] Baseline vs. Trained table, with your prediction written beforehand
+       [X] Run Log — Before, five criteria across three seeds
+       [X] Confusion matrix TYPED AS A MARKDOWN TABLE
        [ ] A verdict on every criterion
        [ ] A diagnosis for every miss, using the agreement report as evidence
-       [ ] Agreement Report with every disagreement adjudicated
+       [X] Agreement Report with every disagreement adjudicated
        [ ] One improvement, with Run Log — After
        [ ] What's Still Broken
        [ ] results_three_seeds_before.json, results_three_seeds_after.json,
            baseline_results.json and
            agreement_results.json committed
-       [ ] At least four new commits
-       [ ] The SAME repository URL as last unit
+       [X] At least four new commits
+       [X] The SAME repository URL as last unit
 
      Do not delete and recreate this repository.
      ═════════════════════════════════════════════════════════════════════ -->
